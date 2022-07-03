@@ -1,12 +1,22 @@
-const Statistics = ({ items }) => (
-  <section class="statistics">
-    <h2 class="title">Upload stats</h2>
+import styles from '../Statistics/Statistics.module.css';
 
-    <ul class="stat-list">
+const Statistics = ({ items }) => (
+  <section className={styles.statistics}>
+    <h2 className={styles.title}>Upload stats</h2>
+
+    <ul className={styles.statList}>
       {items.map(item => (
-        <li class="item" key={item.id}>
-          <span class="label">{item.label}</span>
-          <span class="percentage">{item.percentage}</span>
+        <li
+          className={styles.item}
+          key={item.id}
+          style={{
+            backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
+              16
+            )}`,
+          }}
+        >
+          <span className={styles.label}>{item.label}</span>
+          <span className={styles.percentage}>{item.percentage}</span>
         </li>
       ))}
     </ul>

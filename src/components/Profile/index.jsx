@@ -1,3 +1,4 @@
+import styles from '../Profile/Profile.module.css';
 const Profile = ({
   username,
   tag,
@@ -7,28 +8,36 @@ const Profile = ({
   views,
   likes,
 }) => (
-  <div class="profile">
-    <div class="description">
-      <img src={avatar} alt="User avatar" class="avatar" />
-      <p class="name">{username}</p>
-      <p class="tag">{tag}</p>
-      <p class="location">{location}</p>
-    </div>
+  <div className={styles.profile}>
+    <div className={styles.profileContent}>
+      <div className={styles.description}>
+        <img src={avatar} alt="User avatar" className={styles.avatar} />
+        <p className={styles.name}>{username}</p>
+        <p className={styles.tag}>{tag}</p>
+        <p className={styles.location}>{location}</p>
+      </div>
 
-    <ul class="stats">
-      <li>
-        <span class="label">{followers}</span>
-        <span class="quantity">1000</span>
-      </li>
-      <li>
-        <span class="label">{views}</span>
-        <span class="quantity">2000</span>
-      </li>
-      <li>
-        <span class="label">{likes}</span>
-        <span class="quantity">3000</span>
-      </li>
-    </ul>
+      <ul className={styles.stats}>
+        <li>
+          <span className={styles.label}>{followers}</span>
+          <span className={styles.quantity}>
+            {new Intl.NumberFormat('en-IN').format(followers)}
+          </span>
+        </li>
+        <li>
+          <span className={styles.label}>{views}</span>
+          <span className={styles.quantity}>
+            {new Intl.NumberFormat('en-IN').format(views)}
+          </span>
+        </li>
+        <li>
+          <span className={styles.label}>{likes}</span>
+          <span className={styles.quantity}>
+            {new Intl.NumberFormat('en-IN').format(likes)}
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 );
 
