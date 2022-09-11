@@ -5,13 +5,13 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 320px;
-  background-color: rgb(115, 243, 243);
+  background-color: rgba(231, 233, 239, 0.885);
 }
 .profileContent {
   width: 320px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(228, 155, 155, 0.151);
+  background-color: white;
   padding-top: 30px;
   border-radius: 5px;
   border: 0.2px solid rgba(214, 216, 224, 0.885);
